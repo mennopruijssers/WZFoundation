@@ -11,6 +11,10 @@
 MAKE_CATEGORIES_LOADABLE(NSArray_WZHelpers)
 
 @implementation NSArray (WZHelpers)
+- (id)initWithObject:(id)object {
+    return [self initWithObjects:object, nil];
+}
+
 - (BOOL)isEmpty {
     return [self count] == 0;
 }

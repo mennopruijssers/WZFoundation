@@ -15,15 +15,18 @@
 + (NSString *) entityName;
 + (NSEntityDescription *) entityDescriptionInContext: (NSManagedObjectContext *) context;
 
++ (NSArray *) executeFetchRequest: (NSFetchRequest *) request inContext:(NSManagedObjectContext *) context;
++ (id) executeFetchRequest: (NSFetchRequest *) request andReturnFirstinContext:(NSManagedObjectContext *) context;
+
 + (NSArray *) findAllInContext:(NSManagedObjectContext *) context;
 + (NSArray *) findAllInContext:(NSManagedObjectContext *) context sortedBy: (NSString *) sortTerm ascending:(BOOL) ascending;
 + (NSArray *) findAllInContext:(NSManagedObjectContext *) context filteredBy: (NSPredicate *) searchTerm;
 
-+ (NSFetchRequest *) requestAllInContext:(NSManagedObjectContext *) context;
-+ (NSFetchRequest *) requestAllInContext:(NSManagedObjectContext *)context sortedBy: (NSString *) sortTerm ascending:(BOOL) ascending;
-+ (NSFetchRequest *) requestAllInContext:(NSManagedObjectContext *)context filtedBy: (NSPredicate *) searchTerm;
++ (NSFetchRequest *) requestInContext:(NSManagedObjectContext *) context;
++ (NSFetchRequest *) requestInContext:(NSManagedObjectContext *)context sortedBy: (NSString *) sortTerm ascending:(BOOL) ascending;
++ (NSFetchRequest *) requestInContext:(NSManagedObjectContext *)context filtedBy: (NSPredicate *) searchTerm;
 
 + (id) findFirstInContext:(NSManagedObjectContext *) context;
 + (id) findFirstInContext:(NSManagedObjectContext *) context sortedBy: (NSString *) sortTerm ascending:(BOOL) ascending;
-+ (id) findFirstInContext:(NSManagedObjectContext *) context filteredBy: (NSPredicate *) searchTerm;
++ (id) findFirstInContext:(NSManagedObjectContext *) context filteredBy: (NSPredicate *) predicate;
 @end

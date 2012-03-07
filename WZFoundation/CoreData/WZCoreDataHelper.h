@@ -1,5 +1,5 @@
 //
-//  NSArray+WZHelpers.h
+//  WZCoreDataHelper.h
 //  WZFoundation
 //
 //  Created by Menno on 07-03-12.
@@ -8,8 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSArray (WZHelpers)
-- (id) initWithObject: (id) object;
-- (BOOL) isEmpty;
-- (id) firstObject;
+@interface WZCoreDataHelper : NSObject
++ (void) handleError: (NSError *) error;
 @end

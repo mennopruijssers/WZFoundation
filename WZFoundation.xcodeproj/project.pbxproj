@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DEDE48ED1507B9B4009ADF4A /* WZCoreDataHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = DEDE48EB1507B9B4009ADF4A /* WZCoreDataHelper.h */; };
+		DEDE48EE1507B9B4009ADF4A /* WZCoreDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = DEDE48EC1507B9B4009ADF4A /* WZCoreDataHelper.m */; };
 		DEED52401507B1CD00F3C820 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEED523F1507B1CD00F3C820 /* Foundation.framework */; };
 		DEED524E1507B1CD00F3C820 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEED524D1507B1CD00F3C820 /* SenTestingKit.framework */; };
 		DEED52501507B1CD00F3C820 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEED524F1507B1CD00F3C820 /* UIKit.framework */; };
@@ -36,6 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DEDE48EB1507B9B4009ADF4A /* WZCoreDataHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WZCoreDataHelper.h; sourceTree = "<group>"; };
+		DEDE48EC1507B9B4009ADF4A /* WZCoreDataHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WZCoreDataHelper.m; sourceTree = "<group>"; };
+		DEDE48F01507BBD5009ADF4A /* WZHelpers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WZHelpers.h; sourceTree = "<group>"; };
 		DEED523C1507B1CD00F3C820 /* libWZFoundation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libWZFoundation.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEED523F1507B1CD00F3C820 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		DEED52431507B1CD00F3C820 /* WZFoundation-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WZFoundation-Prefix.pch"; sourceTree = "<group>"; };
@@ -156,6 +161,8 @@
 				DEED52921507B66400F3C820 /* NSManagedObjectContext+Wyzers.m */,
 				DEED52951507B69F00F3C820 /* NSManagedObject+Wyzers.h */,
 				DEED52961507B6A000F3C820 /* NSManagedObject+Wyzers.m */,
+				DEDE48EB1507B9B4009ADF4A /* WZCoreDataHelper.h */,
+				DEDE48EC1507B9B4009ADF4A /* WZCoreDataHelper.m */,
 			);
 			name = "Core Data";
 			path = CoreData;
@@ -164,6 +171,7 @@
 		DEED526B1507B22500F3C820 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				DEDE48F01507BBD5009ADF4A /* WZHelpers.h */,
 				DEED52731507B2A200F3C820 /* LoadableCategory.h */,
 				DEED52751507B33200F3C820 /* NSArray+WZHelpers.h */,
 				DEED52761507B33200F3C820 /* NSArray+WZHelpers.m */,
@@ -183,6 +191,7 @@
 				DEED52771507B33200F3C820 /* NSArray+WZHelpers.h in Headers */,
 				DEED52931507B66400F3C820 /* NSManagedObjectContext+Wyzers.h in Headers */,
 				DEED52971507B6A000F3C820 /* NSManagedObject+Wyzers.h in Headers */,
+				DEDE48ED1507B9B4009ADF4A /* WZCoreDataHelper.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,6 +297,7 @@
 				DEED52781507B33200F3C820 /* NSArray+WZHelpers.m in Sources */,
 				DEED52941507B66400F3C820 /* NSManagedObjectContext+Wyzers.m in Sources */,
 				DEED52981507B6A000F3C820 /* NSManagedObject+Wyzers.m in Sources */,
+				DEDE48EE1507B9B4009ADF4A /* WZCoreDataHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
