@@ -4,5 +4,6 @@
 
 #ifdef __OBJC__
     #import <Foundation/Foundation.h>
+    #import <CoreData/CoreData.h>
     #import "LoadableCategory.h"
 #endif

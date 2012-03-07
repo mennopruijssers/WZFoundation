@@ -18,6 +18,11 @@
 		DEED52741507B2A200F3C820 /* LoadableCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = DEED52731507B2A200F3C820 /* LoadableCategory.h */; };
 		DEED52771507B33200F3C820 /* NSArray+WZHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = DEED52751507B33200F3C820 /* NSArray+WZHelpers.h */; };
 		DEED52781507B33200F3C820 /* NSArray+WZHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = DEED52761507B33200F3C820 /* NSArray+WZHelpers.m */; };
+		DEED528F1507B64A00F3C820 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEED528E1507B64A00F3C820 /* CoreData.framework */; };
+		DEED52931507B66400F3C820 /* NSManagedObjectContext+Wyzers.h in Headers */ = {isa = PBXBuildFile; fileRef = DEED52911507B66400F3C820 /* NSManagedObjectContext+Wyzers.h */; };
+		DEED52941507B66400F3C820 /* NSManagedObjectContext+Wyzers.m in Sources */ = {isa = PBXBuildFile; fileRef = DEED52921507B66400F3C820 /* NSManagedObjectContext+Wyzers.m */; };
+		DEED52971507B6A000F3C820 /* NSManagedObject+Wyzers.h in Headers */ = {isa = PBXBuildFile; fileRef = DEED52951507B69F00F3C820 /* NSManagedObject+Wyzers.h */; };
+		DEED52981507B6A000F3C820 /* NSManagedObject+Wyzers.m in Sources */ = {isa = PBXBuildFile; fileRef = DEED52961507B6A000F3C820 /* NSManagedObject+Wyzers.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +50,11 @@
 		DEED52731507B2A200F3C820 /* LoadableCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadableCategory.h; sourceTree = "<group>"; };
 		DEED52751507B33200F3C820 /* NSArray+WZHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+WZHelpers.h"; sourceTree = "<group>"; };
 		DEED52761507B33200F3C820 /* NSArray+WZHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+WZHelpers.m"; sourceTree = "<group>"; };
+		DEED528E1507B64A00F3C820 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		DEED52911507B66400F3C820 /* NSManagedObjectContext+Wyzers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObjectContext+Wyzers.h"; sourceTree = "<group>"; };
+		DEED52921507B66400F3C820 /* NSManagedObjectContext+Wyzers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObjectContext+Wyzers.m"; sourceTree = "<group>"; };
+		DEED52951507B69F00F3C820 /* NSManagedObject+Wyzers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObject+Wyzers.h"; sourceTree = "<group>"; };
+		DEED52961507B6A000F3C820 /* NSManagedObject+Wyzers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObject+Wyzers.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEED528F1507B64A00F3C820 /* CoreData.framework in Frameworks */,
 				DEED52401507B1CD00F3C820 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -92,6 +103,7 @@
 		DEED523E1507B1CD00F3C820 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DEED528E1507B64A00F3C820 /* CoreData.framework */,
 				DEED523F1507B1CD00F3C820 /* Foundation.framework */,
 				DEED524D1507B1CD00F3C820 /* SenTestingKit.framework */,
 				DEED524F1507B1CD00F3C820 /* UIKit.framework */,
@@ -140,6 +152,10 @@
 		DEED526A1507B21500F3C820 /* Core Data */ = {
 			isa = PBXGroup;
 			children = (
+				DEED52911507B66400F3C820 /* NSManagedObjectContext+Wyzers.h */,
+				DEED52921507B66400F3C820 /* NSManagedObjectContext+Wyzers.m */,
+				DEED52951507B69F00F3C820 /* NSManagedObject+Wyzers.h */,
+				DEED52961507B6A000F3C820 /* NSManagedObject+Wyzers.m */,
 			);
 			name = "Core Data";
 			path = CoreData;
@@ -165,6 +181,8 @@
 				DEED52701507B25700F3C820 /* WZFoundation.h in Headers */,
 				DEED52741507B2A200F3C820 /* LoadableCategory.h in Headers */,
 				DEED52771507B33200F3C820 /* NSArray+WZHelpers.h in Headers */,
+				DEED52931507B66400F3C820 /* NSManagedObjectContext+Wyzers.h in Headers */,
+				DEED52971507B6A000F3C820 /* NSManagedObject+Wyzers.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,6 +286,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				DEED52781507B33200F3C820 /* NSArray+WZHelpers.m in Sources */,
+				DEED52941507B66400F3C820 /* NSManagedObjectContext+Wyzers.m in Sources */,
+				DEED52981507B6A000F3C820 /* NSManagedObject+Wyzers.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
