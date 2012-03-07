@@ -1,0 +1,433 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DEED52401507B1CD00F3C820 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEED523F1507B1CD00F3C820 /* Foundation.framework */; };
+		DEED524E1507B1CD00F3C820 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEED524D1507B1CD00F3C820 /* SenTestingKit.framework */; };
+		DEED52501507B1CD00F3C820 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEED524F1507B1CD00F3C820 /* UIKit.framework */; };
+		DEED52511507B1CD00F3C820 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEED523F1507B1CD00F3C820 /* Foundation.framework */; };
+		DEED52541507B1CD00F3C820 /* libWZFoundation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DEED523C1507B1CD00F3C820 /* libWZFoundation.a */; };
+		DEED525A1507B1CD00F3C820 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DEED52581507B1CD00F3C820 /* InfoPlist.strings */; };
+		DEED525D1507B1CD00F3C820 /* WZFoundationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DEED525C1507B1CD00F3C820 /* WZFoundationTests.m */; };
+		DEED52701507B25700F3C820 /* WZFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = DEED526F1507B25700F3C820 /* WZFoundation.h */; };
+		DEED52741507B2A200F3C820 /* LoadableCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = DEED52731507B2A200F3C820 /* LoadableCategory.h */; };
+		DEED52771507B33200F3C820 /* NSArray+WZHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = DEED52751507B33200F3C820 /* NSArray+WZHelpers.h */; };
+		DEED52781507B33200F3C820 /* NSArray+WZHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = DEED52761507B33200F3C820 /* NSArray+WZHelpers.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DEED52521507B1CD00F3C820 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DEED52331507B1CC00F3C820 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DEED523B1507B1CD00F3C820;
+			remoteInfo = WZFoundation;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DEED523C1507B1CD00F3C820 /* libWZFoundation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libWZFoundation.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		DEED523F1507B1CD00F3C820 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		DEED52431507B1CD00F3C820 /* WZFoundation-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WZFoundation-Prefix.pch"; sourceTree = "<group>"; };
+		DEED524C1507B1CD00F3C820 /* WZFoundationTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WZFoundationTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DEED524D1507B1CD00F3C820 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		DEED524F1507B1CD00F3C820 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		DEED52571507B1CD00F3C820 /* WZFoundationTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WZFoundationTests-Info.plist"; sourceTree = "<group>"; };
+		DEED52591507B1CD00F3C820 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DEED525B1507B1CD00F3C820 /* WZFoundationTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WZFoundationTests.h; sourceTree = "<group>"; };
+		DEED525C1507B1CD00F3C820 /* WZFoundationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WZFoundationTests.m; sourceTree = "<group>"; };
+		DEED526F1507B25700F3C820 /* WZFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WZFoundation.h; sourceTree = "<group>"; };
+		DEED52731507B2A200F3C820 /* LoadableCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadableCategory.h; sourceTree = "<group>"; };
+		DEED52751507B33200F3C820 /* NSArray+WZHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+WZHelpers.h"; sourceTree = "<group>"; };
+		DEED52761507B33200F3C820 /* NSArray+WZHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+WZHelpers.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DEED52391507B1CD00F3C820 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DEED52401507B1CD00F3C820 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DEED52481507B1CD00F3C820 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DEED524E1507B1CD00F3C820 /* SenTestingKit.framework in Frameworks */,
+				DEED52501507B1CD00F3C820 /* UIKit.framework in Frameworks */,
+				DEED52511507B1CD00F3C820 /* Foundation.framework in Frameworks */,
+				DEED52541507B1CD00F3C820 /* libWZFoundation.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DEED52311507B1CC00F3C820 = {
+			isa = PBXGroup;
+			children = (
+				DEED52411507B1CD00F3C820 /* WZFoundation */,
+				DEED52551507B1CD00F3C820 /* WZFoundationTests */,
+				DEED523E1507B1CD00F3C820 /* Frameworks */,
+				DEED523D1507B1CD00F3C820 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DEED523D1507B1CD00F3C820 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DEED523C1507B1CD00F3C820 /* libWZFoundation.a */,
+				DEED524C1507B1CD00F3C820 /* WZFoundationTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DEED523E1507B1CD00F3C820 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DEED523F1507B1CD00F3C820 /* Foundation.framework */,
+				DEED524D1507B1CD00F3C820 /* SenTestingKit.framework */,
+				DEED524F1507B1CD00F3C820 /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DEED52411507B1CD00F3C820 /* WZFoundation */ = {
+			isa = PBXGroup;
+			children = (
+				DEED526F1507B25700F3C820 /* WZFoundation.h */,
+				DEED526A1507B21500F3C820 /* Core Data */,
+				DEED526B1507B22500F3C820 /* Helpers */,
+				DEED52421507B1CD00F3C820 /* Supporting Files */,
+			);
+			path = WZFoundation;
+			sourceTree = "<group>";
+		};
+		DEED52421507B1CD00F3C820 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DEED52431507B1CD00F3C820 /* WZFoundation-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DEED52551507B1CD00F3C820 /* WZFoundationTests */ = {
+			isa = PBXGroup;
+			children = (
+				DEED525B1507B1CD00F3C820 /* WZFoundationTests.h */,
+				DEED525C1507B1CD00F3C820 /* WZFoundationTests.m */,
+				DEED52561507B1CD00F3C820 /* Supporting Files */,
+			);
+			path = WZFoundationTests;
+			sourceTree = "<group>";
+		};
+		DEED52561507B1CD00F3C820 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DEED52571507B1CD00F3C820 /* WZFoundationTests-Info.plist */,
+				DEED52581507B1CD00F3C820 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DEED526A1507B21500F3C820 /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Core Data";
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		DEED526B1507B22500F3C820 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				DEED52731507B2A200F3C820 /* LoadableCategory.h */,
+				DEED52751507B33200F3C820 /* NSArray+WZHelpers.h */,
+				DEED52761507B33200F3C820 /* NSArray+WZHelpers.m */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		DEED523A1507B1CD00F3C820 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DEED52701507B25700F3C820 /* WZFoundation.h in Headers */,
+				DEED52741507B2A200F3C820 /* LoadableCategory.h in Headers */,
+				DEED52771507B33200F3C820 /* NSArray+WZHelpers.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		DEED523B1507B1CD00F3C820 /* WZFoundation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DEED52601507B1CD00F3C820 /* Build configuration list for PBXNativeTarget "WZFoundation" */;
+			buildPhases = (
+				DEED52381507B1CD00F3C820 /* Sources */,
+				DEED52391507B1CD00F3C820 /* Frameworks */,
+				DEED523A1507B1CD00F3C820 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WZFoundation;
+			productName = WZFoundation;
+			productReference = DEED523C1507B1CD00F3C820 /* libWZFoundation.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		DEED524B1507B1CD00F3C820 /* WZFoundationTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DEED52631507B1CD00F3C820 /* Build configuration list for PBXNativeTarget "WZFoundationTests" */;
+			buildPhases = (
+				DEED52471507B1CD00F3C820 /* Sources */,
+				DEED52481507B1CD00F3C820 /* Frameworks */,
+				DEED52491507B1CD00F3C820 /* Resources */,
+				DEED524A1507B1CD00F3C820 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DEED52531507B1CD00F3C820 /* PBXTargetDependency */,
+			);
+			name = WZFoundationTests;
+			productName = WZFoundationTests;
+			productReference = DEED524C1507B1CD00F3C820 /* WZFoundationTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DEED52331507B1CC00F3C820 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = WZ;
+				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = Wyzers;
+			};
+			buildConfigurationList = DEED52361507B1CC00F3C820 /* Build configuration list for PBXProject "WZFoundation" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = DEED52311507B1CC00F3C820;
+			productRefGroup = DEED523D1507B1CD00F3C820 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DEED523B1507B1CD00F3C820 /* WZFoundation */,
+				DEED524B1507B1CD00F3C820 /* WZFoundationTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DEED52491507B1CD00F3C820 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DEED525A1507B1CD00F3C820 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		DEED524A1507B1CD00F3C820 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DEED52381507B1CD00F3C820 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DEED52781507B33200F3C820 /* NSArray+WZHelpers.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DEED52471507B1CD00F3C820 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DEED525D1507B1CD00F3C820 /* WZFoundationTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DEED52531507B1CD00F3C820 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DEED523B1507B1CD00F3C820 /* WZFoundation */;
+			targetProxy = DEED52521507B1CD00F3C820 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DEED52581507B1CD00F3C820 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DEED52591507B1CD00F3C820 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DEED525E1507B1CD00F3C820 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		DEED525F1507B1CD00F3C820 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DEED52611507B1CD00F3C820 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/WZFoundation.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WZFoundation/WZFoundation-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		DEED52621507B1CD00F3C820 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/WZFoundation.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WZFoundation/WZFoundation-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		DEED52641507B1CD00F3C820 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WZFoundation/WZFoundation-Prefix.pch";
+				INFOPLIST_FILE = "WZFoundationTests/WZFoundationTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		DEED52651507B1CD00F3C820 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WZFoundation/WZFoundation-Prefix.pch";
+				INFOPLIST_FILE = "WZFoundationTests/WZFoundationTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DEED52361507B1CC00F3C820 /* Build configuration list for PBXProject "WZFoundation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DEED525E1507B1CD00F3C820 /* Debug */,
+				DEED525F1507B1CD00F3C820 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DEED52601507B1CD00F3C820 /* Build configuration list for PBXNativeTarget "WZFoundation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DEED52611507B1CD00F3C820 /* Debug */,
+				DEED52621507B1CD00F3C820 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DEED52631507B1CD00F3C820 /* Build configuration list for PBXNativeTarget "WZFoundationTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DEED52641507B1CD00F3C820 /* Debug */,
+				DEED52651507B1CD00F3C820 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DEED52331507B1CC00F3C820 /* Project object */;
+}
