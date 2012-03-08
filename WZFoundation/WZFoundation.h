@@ -9,6 +9,7 @@
 #ifndef WZFoundation_WZFoundation_h
 #define WZFoundation_WZFoundation_h
 
-
+#import "WZHelpers.h"
+#import "WZCoreData.h"
 
 #endif
