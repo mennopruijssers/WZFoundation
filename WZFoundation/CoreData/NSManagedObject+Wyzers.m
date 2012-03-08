@@ -13,6 +13,8 @@
 MAKE_CATEGORIES_LOADABLE(NSManagedObject_Wyzers)
 
 @implementation NSManagedObject (Wyzers)
+
+#pragma mark Instance methods
 - (id)fromContext:(NSManagedObjectContext *)context {
     NSError *error = nil;
 
@@ -25,6 +27,12 @@ MAKE_CATEGORIES_LOADABLE(NSManagedObject_Wyzers)
     return other;
 }
 
+- (BOOL)deleteInContext:(NSManagedObject *)context {
+    return [context deleteInContext:self];
+}
+
+#pragma mark Class Methods
+#pragma mark - Descriptors
 + (NSString *) entityName {
     return NSStringFromClass(self);
 }
@@ -33,6 +41,7 @@ MAKE_CATEGORIES_LOADABLE(NSManagedObject_Wyzers)
     return [NSEntityDescription entityForName:[self entityName] inManagedObjectContext:context];
 }
 
+#pragma mark - Helpers
 + (NSArray *)executeFetchRequest:(NSFetchRequest *)request inContext:(NSManagedObjectContext *)context {
     NSError *error = nil;
 	
@@ -53,6 +62,35 @@ MAKE_CATEGORIES_LOADABLE(NSManagedObject_Wyzers)
     return [results firstObject];
 }
 
++ (NSFetchRequest *)requestInContext:(NSManagedObjectContext *)context {
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    
+    [request setEntity:[self entityDescriptionInContext:context]];
+    
+    return request;
+}
+
++ (NSFetchRequest *)requestInContext:(NSManagedObjectContext *)context sortedBy:(NSString *)sortTerm ascending:(BOOL)ascending {
+    NSFetchRequest *request = [self requestInContext:context];
+    
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:sortTerm ascending:ascending];
+    NSArray *descriptors = [[NSArray alloc] initWithObject:sortDescriptor];
+    
+    [request setSortDescriptors:descriptors];
+    
+    return request;
+}
+
++ (NSFetchRequest *)requestInContext:(NSManagedObjectContext *)context filtedBy:(NSPredicate *)predicate {
+    NSFetchRequest *request = [self requestInContext:context];
+    
+    [request setPredicate:predicate];
+    
+    return request;
+}
+
+
+#pragma mark Finders
 + (NSArray *)findAllInContext:(NSManagedObjectContext *)context {
     return [self executeFetchRequest:[self requestInContext:context] inContext:context];     
 }
@@ -65,33 +103,6 @@ MAKE_CATEGORIES_LOADABLE(NSManagedObject_Wyzers)
     return [self executeFetchRequest:[self requestInContext:context filtedBy:searchTerm] inContext:context];            
 }
 
-+ (NSFetchRequest *)requestInContext:(NSManagedObjectContext *)context {
-    NSFetchRequest *request = [[NSFetchRequest alloc] init];
-    
-    [request setEntity:[self entityDescriptionInContext:context]];
-    
-    return request;
-}
-
-+ (NSFetchRequest *)requestInContext:(NSManagedObjectContext *)context sortedBy:(NSString *)sortTerm ascending:(BOOL)ascending {
-    NSFetchRequest *request = [self requestInContext:context];
-
-    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:sortTerm ascending:ascending];
-    NSArray *descriptors = [[NSArray alloc] initWithObject:sortDescriptor];
-    
-    [request setSortDescriptors:descriptors];
-    
-    return request;
-}
-
-+ (NSFetchRequest *)requestInContext:(NSManagedObjectContext *)context filtedBy:(NSPredicate *)predicate {
-    NSFetchRequest *request = [self requestInContext:context];
-        
-    [request setPredicate:predicate];
-    
-    return request;
-}
-
 + (id)findFirstInContext:(NSManagedObjectContext *)context {
     return [self executeFetchRequest:[self requestInContext:context] andReturnFirstinContext:context];
 }
@@ -102,5 +113,10 @@ MAKE_CATEGORIES_LOADABLE(NSManagedObject_Wyzers)
 
 + (id)findFirstInContext:(NSManagedObjectContext *)context sortedBy:(NSString *)sortTerm ascending:(BOOL)ascending {
     return [self executeFetchRequest:[self requestInContext:context sortedBy:sortTerm ascending:ascending] andReturnFirstinContext:context];
+}
+
+#pragma mark Create
++ (id) insertInContext: (NSManagedObjectContext *) context {
+    return [NSEntityDescription insertNewObjectForEntityForName:[self entityName] inManagedObjectContext:context];
 }
 @end
