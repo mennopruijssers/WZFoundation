@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		DEDE48ED1507B9B4009ADF4A /* WZCoreDataHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = DEDE48EB1507B9B4009ADF4A /* WZCoreDataHelper.h */; };
 		DEDE48EE1507B9B4009ADF4A /* WZCoreDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = DEDE48EC1507B9B4009ADF4A /* WZCoreDataHelper.m */; };
+		DEDE48F3150891B4009ADF4A /* NSManagedObjectModel+Wyzers.h in Headers */ = {isa = PBXBuildFile; fileRef = DEDE48F1150891B4009ADF4A /* NSManagedObjectModel+Wyzers.h */; };
+		DEDE48F4150891B4009ADF4A /* NSManagedObjectModel+Wyzers.m in Sources */ = {isa = PBXBuildFile; fileRef = DEDE48F2150891B4009ADF4A /* NSManagedObjectModel+Wyzers.m */; };
 		DEED52401507B1CD00F3C820 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEED523F1507B1CD00F3C820 /* Foundation.framework */; };
 		DEED524E1507B1CD00F3C820 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEED524D1507B1CD00F3C820 /* SenTestingKit.framework */; };
 		DEED52501507B1CD00F3C820 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEED524F1507B1CD00F3C820 /* UIKit.framework */; };
@@ -41,6 +43,8 @@
 		DEDE48EB1507B9B4009ADF4A /* WZCoreDataHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WZCoreDataHelper.h; sourceTree = "<group>"; };
 		DEDE48EC1507B9B4009ADF4A /* WZCoreDataHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WZCoreDataHelper.m; sourceTree = "<group>"; };
 		DEDE48F01507BBD5009ADF4A /* WZHelpers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WZHelpers.h; sourceTree = "<group>"; };
+		DEDE48F1150891B4009ADF4A /* NSManagedObjectModel+Wyzers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObjectModel+Wyzers.h"; sourceTree = "<group>"; };
+		DEDE48F2150891B4009ADF4A /* NSManagedObjectModel+Wyzers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObjectModel+Wyzers.m"; sourceTree = "<group>"; };
 		DEED523C1507B1CD00F3C820 /* libWZFoundation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libWZFoundation.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEED523F1507B1CD00F3C820 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		DEED52431507B1CD00F3C820 /* WZFoundation-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WZFoundation-Prefix.pch"; sourceTree = "<group>"; };
@@ -157,10 +161,12 @@
 		DEED526A1507B21500F3C820 /* Core Data */ = {
 			isa = PBXGroup;
 			children = (
-				DEED52911507B66400F3C820 /* NSManagedObjectContext+Wyzers.h */,
-				DEED52921507B66400F3C820 /* NSManagedObjectContext+Wyzers.m */,
 				DEED52951507B69F00F3C820 /* NSManagedObject+Wyzers.h */,
 				DEED52961507B6A000F3C820 /* NSManagedObject+Wyzers.m */,
+				DEED52911507B66400F3C820 /* NSManagedObjectContext+Wyzers.h */,
+				DEED52921507B66400F3C820 /* NSManagedObjectContext+Wyzers.m */,
+				DEDE48F1150891B4009ADF4A /* NSManagedObjectModel+Wyzers.h */,
+				DEDE48F2150891B4009ADF4A /* NSManagedObjectModel+Wyzers.m */,
 				DEDE48EB1507B9B4009ADF4A /* WZCoreDataHelper.h */,
 				DEDE48EC1507B9B4009ADF4A /* WZCoreDataHelper.m */,
 			);
@@ -192,6 +198,7 @@
 				DEED52931507B66400F3C820 /* NSManagedObjectContext+Wyzers.h in Headers */,
 				DEED52971507B6A000F3C820 /* NSManagedObject+Wyzers.h in Headers */,
 				DEDE48ED1507B9B4009ADF4A /* WZCoreDataHelper.h in Headers */,
+				DEDE48F3150891B4009ADF4A /* NSManagedObjectModel+Wyzers.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,6 +305,7 @@
 				DEED52941507B66400F3C820 /* NSManagedObjectContext+Wyzers.m in Sources */,
 				DEED52981507B6A000F3C820 /* NSManagedObject+Wyzers.m in Sources */,
 				DEDE48EE1507B9B4009ADF4A /* WZCoreDataHelper.m in Sources */,
+				DEDE48F4150891B4009ADF4A /* NSManagedObjectModel+Wyzers.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
