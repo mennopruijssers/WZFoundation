@@ -58,38 +58,39 @@ static void QueueRelease(void* context ){
 }
 
 - (NSManagedObjectContext *)managedObjectContextForDispatchQueue:(dispatch_queue_t)queue {    
-    @synchronized(self) {
         __block NSManagedObjectContext *result;
-        dispatch_block_t block = ^{
-            
-            NSManagedObjectContext *context = (__bridge NSManagedObjectContext *) dispatch_get_specific((__bridge void *)KEY);
-            if (context != NULL) {
-                result = context;
-                return;
-            }            
-        };
+    dispatch_block_t block = ^{
         
-        if(dispatch_get_current_queue() == queue) {
-            block();
-        } else {
-            dispatch_sync(queue, block);
-        }
-        
-        if(result == NULL) {            
-            result = [[NSManagedObjectContext alloc] init];                        
-            [result setPersistentStoreCoordinator:self];
-            
-            if(queue != dispatch_get_main_queue()) {
-                NSManagedObjectContext *mainContext = [self managedObjectContextForDispatchQueue:dispatch_get_main_queue()];
-                [mainContext observeContext:result];
-                [result observeContext:mainContext];
-            }
-
-            dispatch_queue_set_specific(queue, (__bridge void*) KEY, (__bridge_retained void*)result, QueueRelease);        
-        }
-        
-        return result;
+        NSManagedObjectContext *context = (__bridge NSManagedObjectContext *) dispatch_get_specific((__bridge void *)KEY);
+        if (context != NULL) {
+            result = context;
+            return;
+        }            
+    };
+    
+    if(dispatch_get_current_queue() == queue) {
+        block();
+    } else {
+        dispatch_sync(queue, block);
     }
     
+    if(result == NULL) {            
+        result = [[NSManagedObjectContext alloc] init];                        
+        [result setPersistentStoreCoordinator:self];
+        
+        if(queue != dispatch_get_main_queue()) {
+            NSManagedObjectContext *mainContext = [self managedObjectContextForDispatchQueue:dispatch_get_main_queue()];
+            [mainContext observeContext:result];
+            [result observeContext:mainContext];
+        }
+        
+        dispatch_queue_set_specific(queue, (__bridge void*) KEY, (__bridge_retained void*)result, QueueRelease);        
+    }
+    
+    return result;        
+}
+
+- (NSManagedObjectContext *)managedObjectContextForCurrentQueue {
+    return [self managedObjectContextForDispatchQueue:dispatch_get_current_queue()];
 }
 @end

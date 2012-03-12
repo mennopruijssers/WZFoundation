@@ -13,4 +13,5 @@
 - (NSPersistentStore *) addSQLiteStoreWithUL: (NSURL *) url automigrating: (BOOL) autoMigrating;
 
 - (NSManagedObjectContext *) managedObjectContextForDispatchQueue: (dispatch_queue_t) queue;
+- (NSManagedObjectContext *) managedObjectContextForCurrentQueue;
 @end
