@@ -27,8 +27,8 @@ MAKE_CATEGORIES_LOADABLE(NSManagedObject_Wyzers)
     return other;
 }
 
-- (BOOL)deleteInContext:(NSManagedObject *)context {
-    return [context deleteInContext:self];
+- (void) deleteInContext:(NSManagedObjectContext *)context {
+    [context deleteObject:self];
 }
 
 #pragma mark Class Methods

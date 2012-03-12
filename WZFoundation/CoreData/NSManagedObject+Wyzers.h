@@ -11,7 +11,7 @@
 @interface NSManagedObject (Wyzers)
 #pragma mark Instance methods
 - (id) fromContext: (NSManagedObjectContext*) context;
-- (BOOL) deleteInContext: (NSManagedObject*) context; 
+- (void) deleteInContext: (NSManagedObjectContext*) context; 
 
 #pragma mark Class Methods
 #pragma mark - Descriptors

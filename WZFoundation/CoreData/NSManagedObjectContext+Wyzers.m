@@ -20,7 +20,7 @@ MAKE_CATEGORIES_LOADABLE(NSManagedObjectContext_Wyzers)
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(mergeChangesFromContextDidSaveNotification:) name:NSManagedObjectContextDidSaveNotification object:otherContext];
 }
 
-- (void) stopOpbserveContext:(NSManagedObject *)otherContext {
+- (void) stopOpbserveContext:(NSManagedObjectContext *)otherContext {
     [[NSNotificationCenter defaultCenter] removeObserver:self name:NSManagedObjectContextDidSaveNotification object:otherContext];
 }
 

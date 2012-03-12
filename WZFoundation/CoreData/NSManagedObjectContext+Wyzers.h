@@ -11,7 +11,7 @@
 @interface NSManagedObjectContext (Wyzers)
 #pragma mark Change notification observation
 - (void) observeContext:(NSManagedObjectContext *) otherContext;
-- (void) stopOpbserveContext:(NSManagedObject *) otherContext;
+- (void) stopOpbserveContext:(NSManagedObjectContext *) otherContext;
 
 #pragma mark Save
 - (BOOL) save;
