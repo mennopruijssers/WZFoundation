@@ -14,6 +14,10 @@
 		DEDE48EE1507B9B4009ADF4A /* WZCoreDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = DEDE48EC1507B9B4009ADF4A /* WZCoreDataHelper.m */; };
 		DEDE48F3150891B4009ADF4A /* NSManagedObjectModel+Wyzers.h in Headers */ = {isa = PBXBuildFile; fileRef = DEDE48F1150891B4009ADF4A /* NSManagedObjectModel+Wyzers.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DEDE48F4150891B4009ADF4A /* NSManagedObjectModel+Wyzers.m in Sources */ = {isa = PBXBuildFile; fileRef = DEDE48F2150891B4009ADF4A /* NSManagedObjectModel+Wyzers.m */; };
+		DEE91E36150F7E6900C11F54 /* WZLabelCell.h in Headers */ = {isa = PBXBuildFile; fileRef = DEE91E34150F7E6900C11F54 /* WZLabelCell.h */; };
+		DEE91E37150F7E6900C11F54 /* WZLabelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE91E35150F7E6900C11F54 /* WZLabelCell.m */; };
+		DEE91E3A150F80C900C11F54 /* WZLabelFieldCell.h in Headers */ = {isa = PBXBuildFile; fileRef = DEE91E38150F80C900C11F54 /* WZLabelFieldCell.h */; };
+		DEE91E3B150F80C900C11F54 /* WZLabelFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE91E39150F80C900C11F54 /* WZLabelFieldCell.m */; };
 		DEED52401507B1CD00F3C820 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEED523F1507B1CD00F3C820 /* Foundation.framework */; };
 		DEED52701507B25700F3C820 /* WZFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = DEED526F1507B25700F3C820 /* WZFoundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DEED52741507B2A200F3C820 /* LoadableCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = DEED52731507B2A200F3C820 /* LoadableCategory.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -35,6 +39,11 @@
 		DEDE48F01507BBD5009ADF4A /* WZHelpers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WZHelpers.h; sourceTree = "<group>"; };
 		DEDE48F1150891B4009ADF4A /* NSManagedObjectModel+Wyzers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObjectModel+Wyzers.h"; sourceTree = "<group>"; };
 		DEDE48F2150891B4009ADF4A /* NSManagedObjectModel+Wyzers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObjectModel+Wyzers.m"; sourceTree = "<group>"; };
+		DEE91E34150F7E6900C11F54 /* WZLabelCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WZLabelCell.h; sourceTree = "<group>"; };
+		DEE91E35150F7E6900C11F54 /* WZLabelCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WZLabelCell.m; sourceTree = "<group>"; };
+		DEE91E38150F80C900C11F54 /* WZLabelFieldCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WZLabelFieldCell.h; sourceTree = "<group>"; };
+		DEE91E39150F80C900C11F54 /* WZLabelFieldCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WZLabelFieldCell.m; sourceTree = "<group>"; };
+		DEE91E3E150F84A100C11F54 /* WZGUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WZGUI.h; sourceTree = "<group>"; };
 		DEED523C1507B1CD00F3C820 /* libWZFoundation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libWZFoundation.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEED523F1507B1CD00F3C820 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		DEED52431507B1CD00F3C820 /* WZFoundation-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WZFoundation-Prefix.pch"; sourceTree = "<group>"; };
@@ -64,6 +73,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DEE91E31150F742600C11F54 /* GUI */ = {
+			isa = PBXGroup;
+			children = (
+				DEE91E3E150F84A100C11F54 /* WZGUI.h */,
+				DEE91E33150F7E4800C11F54 /* Cells */,
+			);
+			path = GUI;
+			sourceTree = "<group>";
+		};
+		DEE91E33150F7E4800C11F54 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				DEE91E34150F7E6900C11F54 /* WZLabelCell.h */,
+				DEE91E35150F7E6900C11F54 /* WZLabelCell.m */,
+				DEE91E38150F80C900C11F54 /* WZLabelFieldCell.h */,
+				DEE91E39150F80C900C11F54 /* WZLabelFieldCell.m */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
 		DEED52311507B1CC00F3C820 = {
 			isa = PBXGroup;
 			children = (
@@ -97,6 +126,7 @@
 			children = (
 				DEED526F1507B25700F3C820 /* WZFoundation.h */,
 				DEED526A1507B21500F3C820 /* Core Data */,
+				DEE91E31150F742600C11F54 /* GUI */,
 				DEED526B1507B22500F3C820 /* Helpers */,
 				DEED52421507B1CD00F3C820 /* Supporting Files */,
 			);
@@ -157,6 +187,8 @@
 				DEDE48F3150891B4009ADF4A /* NSManagedObjectModel+Wyzers.h in Headers */,
 				DE71ADA31509106200445B75 /* WZCoreData.h in Headers */,
 				DE71ADC51509EE7F00445B75 /* NSPersistentStoreCoordinator+Wyzers.h in Headers */,
+				DEE91E36150F7E6900C11F54 /* WZLabelCell.h in Headers */,
+				DEE91E3A150F80C900C11F54 /* WZLabelFieldCell.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,6 +250,8 @@
 				DEDE48EE1507B9B4009ADF4A /* WZCoreDataHelper.m in Sources */,
 				DEDE48F4150891B4009ADF4A /* NSManagedObjectModel+Wyzers.m in Sources */,
 				DE71ADC61509EE7F00445B75 /* NSPersistentStoreCoordinator+Wyzers.m in Sources */,
+				DEE91E37150F7E6900C11F54 /* WZLabelCell.m in Sources */,
+				DEE91E3B150F80C900C11F54 /* WZLabelFieldCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

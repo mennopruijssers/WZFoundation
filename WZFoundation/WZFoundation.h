@@ -11,5 +11,5 @@
 
 #import "WZHelpers.h"
 #import "WZCoreData.h"
-
+#import "WZGUI.h"
 #endif

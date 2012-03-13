@@ -10,6 +10,7 @@
 
 @implementation WZCoreDataHelper
 + (void)handleError:(NSError *)error {
-#warning TODO!
+    NSLog(@"Core Data Error: %@", error);
+    abort();
 }
 @end

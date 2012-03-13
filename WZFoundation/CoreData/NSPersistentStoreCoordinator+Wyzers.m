@@ -59,8 +59,8 @@ static void QueueRelease(void* context ){
 
 - (NSManagedObjectContext *)managedObjectContextForDispatchQueue:(dispatch_queue_t)queue {    
         __block NSManagedObjectContext *result;
+
     dispatch_block_t block = ^{
-        
         NSManagedObjectContext *context = (__bridge NSManagedObjectContext *) dispatch_get_specific((__bridge void *)KEY);
         if (context != NULL) {
             result = context;
@@ -83,7 +83,6 @@ static void QueueRelease(void* context ){
             [mainContext observeContext:result];
             [result observeContext:mainContext];
         }
-        
         dispatch_queue_set_specific(queue, (__bridge void*) KEY, (__bridge_retained void*)result, QueueRelease);        
     }
     
