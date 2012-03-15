@@ -11,6 +11,20 @@
 
 #import "LoadableCategory.h"
 #import "NSArray+WZHelpers.h"
-
+#import "UIView+Wyzers.h"
 
 #endif
+
+static inline UIViewAnimationOptions animationOptionsWithCurve(UIViewAnimationCurve curve)
+{
+    switch (curve) {
+        case UIViewAnimationCurveEaseInOut:
+            return UIViewAnimationOptionCurveEaseInOut;
+        case UIViewAnimationCurveEaseIn:
+            return UIViewAnimationOptionCurveEaseIn;
+        case UIViewAnimationCurveEaseOut:
+            return UIViewAnimationOptionCurveEaseOut;
+        case UIViewAnimationCurveLinear:
+            return UIViewAnimationOptionCurveLinear;
+    }
+}

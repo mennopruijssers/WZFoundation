@@ -1,27 +1,26 @@
 //
-//  WZLabelFieldCell.m
+//  WZLabelValueCell.m
 //  WZFoundation
 //
 //  Created by Menno on 13-03-12.
 //  Copyright (c) 2012 Wyzers. All rights reserved.
 //
 
-#import "WZLabelFieldCell.h"
+#import "WZLabelValueCell.h"
 
-@implementation WZLabelFieldCell
-@synthesize textField;
+@implementation WZLabelValueCell
+@synthesize valueLabel;
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     
     if(self) {
-        textField = [[UITextField alloc] init];
-
-        [textField setBackgroundColor:[UIColor clearColor]];
-        [textField setFont:[UIFont boldSystemFontOfSize:16.0f]];
-        [textField setContentVerticalAlignment:UIControlContentVerticalAlignmentCenter];
-
-        [[self contentView] addSubview:textField];
+        valueLabel = [[WZResponderLabel alloc] init];
+        
+        [valueLabel setBackgroundColor:[UIColor clearColor]];
+        [valueLabel setFont:[UIFont boldSystemFontOfSize:16.0f]];
+        
+        [[self contentView] addSubview:valueLabel];
     }
     
     return self;
@@ -35,21 +34,22 @@
     frame.origin.x += labelAndMargin;
     frame.size.width -= labelAndMargin;
     
-    [textField setFrame:frame];
+    [valueLabel setFrame:frame];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
     
     UIColor* color = selected ? [UIColor whiteColor] : [UIColor blackColor];
-    [textField setTextColor:color];
+    [valueLabel setTextColor:color];
 }
 
 - (void)setHighlighted:(BOOL)highlighted animated:(BOOL)animated {
     [super setHighlighted:highlighted animated:animated];
     
     UIColor* color = highlighted ? [UIColor whiteColor] : [UIColor blackColor];
-    [textField setTextColor:color];
+    [valueLabel setTextColor:color];
 }
+
 
 @end

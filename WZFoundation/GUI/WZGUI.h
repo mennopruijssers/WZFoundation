@@ -11,5 +11,10 @@
 
 #import "WZLabelCell.h"
 #import "WZLabelFieldCell.h"
+#import "WZLabelValueCell.h"
+#import "WZButtonCell.h"
+
+#import "WZSelectViewController.h"
+#import "WZResponderLabel.h"
 
 #endif

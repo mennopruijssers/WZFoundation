@@ -10,6 +10,6 @@
 
 @interface WZLabelFieldCell : WZLabelCell
 
-@property UITextField* textField;
+@property (strong, nonatomic) UITextField* textField;
 
 @end
