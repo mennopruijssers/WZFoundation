@@ -12,7 +12,9 @@
 #import "LoadableCategory.h"
 #import "NSArray+WZHelpers.h"
 #import "UIView+Wyzers.h"
-
+#import "NSString+Wyzers.h"
+#import "UIDevice+Wyzers.h"
+#import "WZKeyChain.h"
 #endif
 
 static inline UIViewAnimationOptions animationOptionsWithCurve(UIViewAnimationCurve curve)
