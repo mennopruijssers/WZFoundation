@@ -57,13 +57,13 @@ CFTypeRef WZKeyChainAccessibilityType = NULL;
     OSStatus status = WZKeyChainErrorBadArguments;
 	CFArrayRef result = NULL;
     NSMutableDictionary *query = [self _queryForService:service account:nil];
-    [query setObject:(id)kCFBooleanTrue forKey:(id)kSecReturnAttributes];
-    [query setObject:(id)kSecMatchLimitAll forKey:(id)kSecMatchLimit];
-    status = SecItemCopyMatching((CFDictionaryRef)query, (CFTypeRef *)&result);
+    [query setObject:(id)kCFBooleanTrue forKey:(__bridge id)kSecReturnAttributes];
+    [query setObject:(__bridge id)kSecMatchLimitAll forKey:(__bridge id)kSecMatchLimit];
+    status = SecItemCopyMatching((__bridge CFDictionaryRef)query, (CFTypeRef *)&result);
     if (status != noErr && error != NULL) {
 		*error = [NSError errorWithDomain:kWZKeyChainErrorDomain code:status userInfo:nil];
 	}
-    return [(NSArray *)result autorelease];
+    return (__bridge_transfer NSArray *)result;
 }
 
 
@@ -80,18 +80,17 @@ CFTypeRef WZKeyChainAccessibilityType = NULL;
 	if (service && account) {
 		CFDataRef data = NULL;
 		NSMutableDictionary *query = [self _queryForService:service account:account];
-		[query setObject:(id)kCFBooleanTrue forKey:(id)kSecReturnData];
-		[query setObject:(id)kSecMatchLimitOne forKey:(id)kSecMatchLimit];
-		status = SecItemCopyMatching((CFDictionaryRef)query, (CFTypeRef *)&data);
+		[query setObject:(id)kCFBooleanTrue forKey:(__bridge id)kSecReturnData];
+		[query setObject:(__bridge id)kSecMatchLimitOne forKey:(__bridge id)kSecMatchLimit];
+		status = SecItemCopyMatching((__bridge CFDictionaryRef)query, (CFTypeRef *)&data);
 		if (status == noErr && CFDataGetLength(data) > 0) {
-			result = [[NSString alloc] initWithData:(NSData *)data encoding:NSUTF8StringEncoding];
+			result = [[NSString alloc] initWithData:(__bridge_transfer NSData *)data encoding:NSUTF8StringEncoding];
 		}
-		if (data != NULL) { CFRelease(data); }
 	}
 	if (status != noErr && error != NULL) {
 		*error = [NSError errorWithDomain:kWZKeyChainErrorDomain code:status userInfo:nil];
 	}
-	return [result autorelease];
+	return result;
 }
 
 
@@ -106,7 +105,7 @@ CFTypeRef WZKeyChainAccessibilityType = NULL;
 	OSStatus status = WZKeyChainErrorBadArguments;
 	if (service && account) {
 		NSMutableDictionary *query = [self _queryForService:service account:account];
-		status = SecItemDelete((CFDictionaryRef)query);
+		status = SecItemDelete((__bridge CFDictionaryRef)query);
 	}
 	if (status != noErr && error != NULL) {
 		*error = [NSError errorWithDomain:kWZKeyChainErrorDomain code:status userInfo:nil];
@@ -128,15 +127,15 @@ CFTypeRef WZKeyChainAccessibilityType = NULL;
 	if (password && service && account) {
         [self deletePasswordForService:service account:account];
         NSMutableDictionary *query = [self _queryForService:service account:account];
-        [query setObject:[password dataUsingEncoding:NSUTF8StringEncoding] forKey:(id)kSecValueData];
+        [query setObject:[password dataUsingEncoding:NSUTF8StringEncoding] forKey:(__bridge id)kSecValueData];
 		
 #if __IPHONE_4_0 && TARGET_OS_IPHONE
 		if (WZKeyChainAccessibilityType) {
-			[query setObject:(id)[self accessibilityType] forKey:(id)kSecAttrAccessible];
+			[query setObject:(id)[self accessibilityType] forKey:(__bridge id)kSecAttrAccessible];
 		}
 #endif
 		
-        status = SecItemAdd((CFDictionaryRef)query, NULL);
+        status = SecItemAdd((__bridge CFDictionaryRef)query, NULL);
 	}
 	if (status != noErr && error != NULL) {
 		*error = [NSError errorWithDomain:kWZKeyChainErrorDomain code:status userInfo:nil];
@@ -167,14 +166,14 @@ CFTypeRef WZKeyChainAccessibilityType = NULL;
 
 + (NSMutableDictionary *)_queryForService:(NSString *)service account:(NSString *)account {
     NSMutableDictionary *dictionary = [NSMutableDictionary dictionaryWithCapacity:3];
-    [dictionary setObject:(id)kSecClassGenericPassword forKey:(id)kSecClass];
+    [dictionary setObject:(__bridge id)kSecClassGenericPassword forKey:(__bridge id)kSecClass];
 	
     if (service) {
-		[dictionary setObject:service forKey:(id)kSecAttrService];
+		[dictionary setObject:service forKey:(__bridge id)kSecAttrService];
 	}
 	
     if (account) {
-		[dictionary setObject:account forKey:(id)kSecAttrAccount];
+		[dictionary setObject:account forKey:(__bridge id)kSecAttrAccount];
 	}
 	
     return dictionary;

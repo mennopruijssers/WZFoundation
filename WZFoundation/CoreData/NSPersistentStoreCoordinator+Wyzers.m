@@ -58,8 +58,22 @@ static void QueueRelease(void* context ){
 }
 
 - (NSManagedObjectContext *)managedObjectContextForDispatchQueue:(dispatch_queue_t)queue {    
-        __block NSManagedObjectContext *result;
-
+    if (queue == dispatch_get_main_queue()) {
+        NSMutableDictionary *threadDic = [[NSThread mainThread] threadDictionary];
+        
+        static NSString *key = @"WZManagedObjectContext";
+        if([threadDic containsObjectForKey:key]) {
+            return [threadDic objectForKey:key];
+        } else {
+            NSManagedObjectContext *context = [[NSManagedObjectContext alloc] init];
+            [context setPersistentStoreCoordinator:self];
+            [threadDic setObject:context forKey:key];
+            
+            return context;
+        }
+    }
+    __block NSManagedObjectContext *result;
+    
     dispatch_block_t block = ^{
         NSManagedObjectContext *context = (__bridge NSManagedObjectContext *) dispatch_get_specific((__bridge void *)KEY);
         if (context != NULL) {
