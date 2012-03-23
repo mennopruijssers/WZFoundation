@@ -17,4 +17,5 @@
 #import "WZSelectViewController.h"
 #import "WZResponderLabel.h"
 
+#import "UITableView+Wyzers.h";
 #endif
