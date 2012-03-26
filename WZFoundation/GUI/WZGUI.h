@@ -18,4 +18,7 @@
 #import "WZResponderLabel.h"
 
 #import "UITableView+Wyzers.h"
+
+#import "WZBlocks.h"
+#import "UIActionSheet+Wyzers.h"
 #endif
