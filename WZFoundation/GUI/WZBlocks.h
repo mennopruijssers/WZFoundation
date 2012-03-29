@@ -10,5 +10,6 @@
 #define WZFoundation_WZBlocks_h
 
 typedef void (^VoidBlock)();
+typedef void (^DismissBlock)(int buttonIndex);
 
 #endif

@@ -21,4 +21,5 @@
 
 #import "WZBlocks.h"
 #import "UIActionSheet+Wyzers.h"
+#import "WZPromptAlertView.h"
 #endif

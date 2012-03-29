@@ -9,9 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "WZBlocks.h"
 
-typedef void (^DismissBlock)(int buttonIndex);
 typedef void (^PhotoPickedBlock)(UIImage *chosenImage);
-
 
 
 @interface UIActionSheet (Wyzers)<UIActionSheetDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
