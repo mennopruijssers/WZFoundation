@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DE43D17015258F7700C16766 /* NSDate+WZJSON.h in Headers */ = {isa = PBXBuildFile; fileRef = DE43D16E15258F7700C16766 /* NSDate+WZJSON.h */; };
+		DE43D17115258F7700C16766 /* NSDate+WZJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = DE43D16F15258F7700C16766 /* NSDate+WZJSON.m */; };
 		DE71ADA31509106200445B75 /* WZCoreData.h in Headers */ = {isa = PBXBuildFile; fileRef = DE71ADA21509106200445B75 /* WZCoreData.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DE71ADC51509EE7F00445B75 /* NSPersistentStoreCoordinator+Wyzers.h in Headers */ = {isa = PBXBuildFile; fileRef = DE71ADC31509EE7E00445B75 /* NSPersistentStoreCoordinator+Wyzers.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DE71ADC61509EE7F00445B75 /* NSPersistentStoreCoordinator+Wyzers.m in Sources */ = {isa = PBXBuildFile; fileRef = DE71ADC41509EE7E00445B75 /* NSPersistentStoreCoordinator+Wyzers.m */; };
@@ -60,6 +62,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DE43D16E15258F7700C16766 /* NSDate+WZJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+WZJSON.h"; sourceTree = "<group>"; };
+		DE43D16F15258F7700C16766 /* NSDate+WZJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+WZJSON.m"; sourceTree = "<group>"; };
 		DE71ADA21509106200445B75 /* WZCoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WZCoreData.h; sourceTree = "<group>"; };
 		DE71ADC31509EE7E00445B75 /* NSPersistentStoreCoordinator+Wyzers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSPersistentStoreCoordinator+Wyzers.h"; sourceTree = "<group>"; };
 		DE71ADC41509EE7E00445B75 /* NSPersistentStoreCoordinator+Wyzers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSPersistentStoreCoordinator+Wyzers.m"; sourceTree = "<group>"; };
@@ -253,6 +257,8 @@
 				DEC28641151241FA0043CBD2 /* WZKeyChain.m */,
 				DE9CE9F51513263700CCB8A9 /* NSDictionary+Wyzers.h */,
 				DE9CE9F61513263700CCB8A9 /* NSDictionary+Wyzers.m */,
+				DE43D16E15258F7700C16766 /* NSDate+WZJSON.h */,
+				DE43D16F15258F7700C16766 /* NSDate+WZJSON.m */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -290,6 +296,7 @@
 				DEAB0B501520C4A8001A3BB5 /* WZPromptAlertView.h in Headers */,
 				DE9CEA0515133DC000CCB8A9 /* WZGUI.h in Headers */,
 				DEAB0B5615219011001A3BB5 /* UIAlertView+Wyzers.h in Headers */,
+				DE43D17015258F7700C16766 /* NSDate+WZJSON.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,6 +373,7 @@
 				DE9E4BE0151E320800F248D4 /* UIActionSheet+Wyzers.m in Sources */,
 				DEAB0B511520C4A8001A3BB5 /* WZPromptAlertView.m in Sources */,
 				DEAB0B5715219011001A3BB5 /* UIAlertView+Wyzers.m in Sources */,
+				DE43D17115258F7700C16766 /* NSDate+WZJSON.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

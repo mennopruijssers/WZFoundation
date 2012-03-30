@@ -26,4 +26,17 @@ MAKE_CATEGORIES_LOADABLE(NSArray_WZHelpers)
 
     return [self objectAtIndex:0];
 }
+
+- (NSString*)join {
+    NSMutableString *string = [NSMutableString string];
+    
+    for(id object in self) {
+        if([string length] > 0) {
+            [string appendString:@", "];
+        }
+        [string appendString:object];
+    }
+    
+    return string;
+}
 @end

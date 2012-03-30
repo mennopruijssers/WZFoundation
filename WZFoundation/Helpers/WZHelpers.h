@@ -16,6 +16,7 @@
 #import "UIDevice+Wyzers.h"
 #import "WZKeyChain.h"
 #import "NSDictionary+Wyzers.h"
+#import "NSDate+WZJSON.h"
 #endif
 
 static inline UIViewAnimationOptions animationOptionsWithCurve(UIViewAnimationCurve curve)

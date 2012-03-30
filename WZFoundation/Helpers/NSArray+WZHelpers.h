@@ -12,4 +12,6 @@
 - (id) initWithObject: (id) object;
 - (BOOL) isEmpty;
 - (id) firstObject;
+
+- (NSString*) join;
 @end
