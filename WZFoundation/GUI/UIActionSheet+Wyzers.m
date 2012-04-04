@@ -7,13 +7,20 @@
 //
 
 #import "UIActionSheet+Wyzers.h"
+#import <objc/runtime.h>
 
-static DismissBlock _dismissBlock;
-static VoidBlock _cancelBlock;
-static PhotoPickedBlock _photoPickedBlock;
-static UIViewController *_presentVC;
+//static DismissBlock _dismissBlock;
+//static VoidBlock _cancelBlock;
+//static PhotoPickedBlock _photoPickedBlock;
+//static UIViewController *_presentVC;
 
 #define kPhotoActionSheetTag 8790 //CharacterCodes for WZ
+
+
+#define keyDismissed @"UIActionSheet (Wyzers).dismissed"
+#define keyCancelled @"UIActionSheet (Wyzers).cancelled"
+#define keyPhotoPicked @"UIActionSheet (Wyzers).photoPicked"
+#define keyPresentVC @"UIActionSheet (Wyzers).presentVC"
 
 @implementation UIActionSheet (Wyzers)
 
@@ -41,15 +48,14 @@ static UIViewController *_presentVC;
                     onDismiss:(DismissBlock) dismissed                   
                      onCancel:(VoidBlock) cancelled
 {
-    _cancelBlock  = [cancelled copy];
-    
-    _dismissBlock  = [dismissed copy];
-    
     UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:title 
                                                              delegate:(id<UIActionSheetDelegate>)[self class] 
                                                     cancelButtonTitle:nil
                                                destructiveButtonTitle:destructiveButtonTitle 
                                                     otherButtonTitles:nil];
+    objc_setAssociatedObject(actionSheet, keyDismissed, dismissed, OBJC_ASSOCIATION_COPY_NONATOMIC);
+    objc_setAssociatedObject(actionSheet, keyCancelled, cancelled, OBJC_ASSOCIATION_COPY_NONATOMIC);
+    
     
     for(NSString* thisButtonTitle in buttonTitles) {
         [actionSheet addButtonWithTitle:thisButtonTitle];
@@ -78,12 +84,7 @@ static UIViewController *_presentVC;
                     presentVC:(UIViewController*) presentVC
                 onPhotoPicked:(PhotoPickedBlock) photoPicked                   
                      onCancel:(VoidBlock) cancelled
-{
-    _cancelBlock  = [cancelled copy];
-    
-    _photoPickedBlock  = [photoPicked copy];
-    _presentVC = presentVC;
-        
+{        
     int cancelButtonIndex = -1;
     
     UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:title 
@@ -91,6 +92,13 @@ static UIViewController *_presentVC;
 													cancelButtonTitle:nil
 											   destructiveButtonTitle:nil
 													otherButtonTitles:nil];
+    
+    objc_setAssociatedObject(actionSheet, keyCancelled, cancelled, OBJC_ASSOCIATION_COPY_NONATOMIC);
+    objc_setAssociatedObject(actionSheet, keyPhotoPicked, photoPicked, OBJC_ASSOCIATION_COPY_NONATOMIC);
+    objc_setAssociatedObject(actionSheet, keyPresentVC, presentVC, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+
+
+    
     
 	if([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera])
 	{
@@ -124,26 +132,39 @@ static UIViewController *_presentVC;
 + (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
 	UIImage *editedImage = (UIImage*) [info valueForKey:UIImagePickerControllerEditedImage];
-    if(!editedImage)
-        editedImage = (UIImage*) [info valueForKey:UIImagePickerControllerOriginalImage];
+    if(editedImage) {
+        PhotoPickedBlock photoPickedBlock = objc_getAssociatedObject(picker, keyPhotoPicked);
+        photoPickedBlock(editedImage);
+    }
+    [picker dismissModalViewControllerAnimated:YES];	
     
-    _photoPickedBlock(editedImage);
-	[picker dismissModalViewControllerAnimated:YES];	
+    objc_setAssociatedObject(picker, keyPresentVC, nil, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    objc_setAssociatedObject(picker, keyPhotoPicked, nil, OBJC_ASSOCIATION_COPY_NONATOMIC);
+    objc_setAssociatedObject(picker, keyCancelled, nil, OBJC_ASSOCIATION_COPY_NONATOMIC);
 }
 
 
 + (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
 {
     // Dismiss the image selection and close the program
-    [_presentVC dismissModalViewControllerAnimated:YES];    
-    _cancelBlock();
+    UIViewController *presentVC = objc_getAssociatedObject(picker,keyPresentVC);    
+    [presentVC dismissModalViewControllerAnimated:YES];    
+    
+    VoidBlock cancelBlock = objc_getAssociatedObject(picker, keyCancelled);
+    cancelBlock();
+    
+    objc_setAssociatedObject(picker, keyPresentVC, nil, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    objc_setAssociatedObject(picker, keyPhotoPicked, nil, OBJC_ASSOCIATION_COPY_NONATOMIC);
+    objc_setAssociatedObject(picker, keyCancelled, nil, OBJC_ASSOCIATION_COPY_NONATOMIC);
+    
 }
 
 +(void)actionSheet:(UIActionSheet*) actionSheet didDismissWithButtonIndex:(NSInteger) buttonIndex
 {
 	if(buttonIndex == [actionSheet cancelButtonIndex])
 	{
-		_cancelBlock();
+        VoidBlock cancelBlock = objc_getAssociatedObject(actionSheet, keyCancelled);
+		cancelBlock();
 	}
     else
     {
@@ -172,12 +193,32 @@ static UIViewController *_presentVC;
                 picker.sourceType = UIImagePickerControllerSourceTypeCamera;;
             }
             
-            [_presentVC presentModalViewController:picker animated:YES];
+            
+            UIViewController *presentVC = objc_getAssociatedObject(actionSheet, keyPresentVC);
+
+            objc_setAssociatedObject(picker, keyPresentVC, presentVC, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+            
+            PhotoPickedBlock photoPickedBlock = objc_getAssociatedObject(actionSheet, keyPhotoPicked);
+            objc_setAssociatedObject(picker, keyPhotoPicked, photoPickedBlock, OBJC_ASSOCIATION_COPY_NONATOMIC);
+            
+            VoidBlock cancelledBlock = objc_getAssociatedObject(actionSheet, keyCancelled);
+            objc_setAssociatedObject(picker, keyCancelled, cancelledBlock, OBJC_ASSOCIATION_COPY_NONATOMIC);
+            
+            
+            
+
+            [presentVC presentModalViewController:picker animated:YES];
         }
         else
         {
-            _dismissBlock(buttonIndex);
-        }
+            DismissBlock dismissBlock = objc_getAssociatedObject(actionSheet, keyDismissed);
+            dismissBlock(buttonIndex);
+        }        
     }
+    
+    objc_setAssociatedObject(actionSheet, keyDismissed, nil, OBJC_ASSOCIATION_COPY_NONATOMIC);
+    objc_setAssociatedObject(actionSheet, keyCancelled, nil, OBJC_ASSOCIATION_COPY_NONATOMIC);
+    objc_setAssociatedObject(actionSheet, keyPhotoPicked, nil, OBJC_ASSOCIATION_COPY_NONATOMIC);
+    objc_setAssociatedObject(actionSheet, keyPresentVC, nil, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 @end

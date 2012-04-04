@@ -51,7 +51,7 @@
 }
 
 + (void)alertView:(WZPromptAlertView*) alertView didDismissWithButtonIndex:(NSInteger) buttonIndex {
-    
+    [[alertView textField] resignFirstResponder];
 	if(buttonIndex == [alertView cancelButtonIndex])
 	{
         if([alertView cancelBlock]) {
