@@ -12,6 +12,10 @@
 		DE71ADA31509106200445B75 /* WZCoreData.h in Headers */ = {isa = PBXBuildFile; fileRef = DE71ADA21509106200445B75 /* WZCoreData.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DE71ADC51509EE7F00445B75 /* NSPersistentStoreCoordinator+Wyzers.h in Headers */ = {isa = PBXBuildFile; fileRef = DE71ADC31509EE7E00445B75 /* NSPersistentStoreCoordinator+Wyzers.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DE71ADC61509EE7F00445B75 /* NSPersistentStoreCoordinator+Wyzers.m in Sources */ = {isa = PBXBuildFile; fileRef = DE71ADC41509EE7E00445B75 /* NSPersistentStoreCoordinator+Wyzers.m */; };
+		DE923F671539BD130029C3CA /* WZGradientView.h in Headers */ = {isa = PBXBuildFile; fileRef = DE923F651539BD130029C3CA /* WZGradientView.h */; };
+		DE923F681539BD130029C3CA /* WZGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = DE923F661539BD130029C3CA /* WZGradientView.m */; };
+		DE923F6B1539BD450029C3CA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE923F6A1539BD450029C3CA /* CoreGraphics.framework */; };
+		DE923F6D1539BD770029C3CA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE923F6C1539BD770029C3CA /* QuartzCore.framework */; };
 		DE9CE9F71513263700CCB8A9 /* NSDictionary+Wyzers.h in Headers */ = {isa = PBXBuildFile; fileRef = DE9CE9F51513263700CCB8A9 /* NSDictionary+Wyzers.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DE9CE9F81513263700CCB8A9 /* NSDictionary+Wyzers.m in Sources */ = {isa = PBXBuildFile; fileRef = DE9CE9F61513263700CCB8A9 /* NSDictionary+Wyzers.m */; };
 		DE9CEA0415133DB100CCB8A9 /* WZHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = DEDE48F01507BBD5009ADF4A /* WZHelpers.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -69,6 +73,10 @@
 		DE71ADA21509106200445B75 /* WZCoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WZCoreData.h; sourceTree = "<group>"; };
 		DE71ADC31509EE7E00445B75 /* NSPersistentStoreCoordinator+Wyzers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSPersistentStoreCoordinator+Wyzers.h"; sourceTree = "<group>"; };
 		DE71ADC41509EE7E00445B75 /* NSPersistentStoreCoordinator+Wyzers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSPersistentStoreCoordinator+Wyzers.m"; sourceTree = "<group>"; };
+		DE923F651539BD130029C3CA /* WZGradientView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WZGradientView.h; sourceTree = "<group>"; };
+		DE923F661539BD130029C3CA /* WZGradientView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WZGradientView.m; sourceTree = "<group>"; };
+		DE923F6A1539BD450029C3CA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		DE923F6C1539BD770029C3CA /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		DE9CE9F51513263700CCB8A9 /* NSDictionary+Wyzers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Wyzers.h"; sourceTree = "<group>"; };
 		DE9CE9F61513263700CCB8A9 /* NSDictionary+Wyzers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Wyzers.m"; sourceTree = "<group>"; };
 		DE9E4BDB151E31D800F248D4 /* WZBlocks.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WZBlocks.h; sourceTree = "<group>"; };
@@ -133,6 +141,8 @@
 				DEED528F1507B64A00F3C820 /* CoreData.framework in Frameworks */,
 				DEED52401507B1CD00F3C820 /* Foundation.framework in Frameworks */,
 				DEC2863F151241D20043CBD2 /* Security.framework in Frameworks */,
+				DE923F6B1539BD450029C3CA /* CoreGraphics.framework in Frameworks */,
+				DE923F6D1539BD770029C3CA /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -155,6 +165,8 @@
 				DEAB0B4F1520C4A8001A3BB5 /* WZPromptAlertView.m */,
 				DEAB0B5415219011001A3BB5 /* UIAlertView+Wyzers.h */,
 				DEAB0B5515219011001A3BB5 /* UIAlertView+Wyzers.m */,
+				DE923F651539BD130029C3CA /* WZGradientView.h */,
+				DE923F661539BD130029C3CA /* WZGradientView.m */,
 			);
 			path = GUI;
 			sourceTree = "<group>";
@@ -196,6 +208,8 @@
 		DEED523E1507B1CD00F3C820 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DE923F6C1539BD770029C3CA /* QuartzCore.framework */,
+				DE923F6A1539BD450029C3CA /* CoreGraphics.framework */,
 				DEC2863E151241D20043CBD2 /* Security.framework */,
 				DEED528E1507B64A00F3C820 /* CoreData.framework */,
 				DEED523F1507B1CD00F3C820 /* Foundation.framework */,
@@ -304,6 +318,7 @@
 				DE9E4BDF151E320800F248D4 /* UIActionSheet+Wyzers.h in Headers */,
 				DEAB0B501520C4A8001A3BB5 /* WZPromptAlertView.h in Headers */,
 				DE9CEA0515133DC000CCB8A9 /* WZGUI.h in Headers */,
+				DE923F671539BD130029C3CA /* WZGradientView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -382,6 +397,7 @@
 				DEAB0B5715219011001A3BB5 /* UIAlertView+Wyzers.m in Sources */,
 				DE43D17115258F7700C16766 /* NSDate+WZJSON.m in Sources */,
 				DEA008D31529F712005BBCFA /* UIImage+Resize.m in Sources */,
+				DE923F681539BD130029C3CA /* WZGradientView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
