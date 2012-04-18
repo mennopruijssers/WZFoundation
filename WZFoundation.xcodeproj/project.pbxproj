@@ -7,63 +7,34 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DE43D17015258F7700C16766 /* NSDate+WZJSON.h in Headers */ = {isa = PBXBuildFile; fileRef = DE43D16E15258F7700C16766 /* NSDate+WZJSON.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DE43D17115258F7700C16766 /* NSDate+WZJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = DE43D16F15258F7700C16766 /* NSDate+WZJSON.m */; };
-		DE71ADA31509106200445B75 /* WZCoreData.h in Headers */ = {isa = PBXBuildFile; fileRef = DE71ADA21509106200445B75 /* WZCoreData.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DE71ADC51509EE7F00445B75 /* NSPersistentStoreCoordinator+Wyzers.h in Headers */ = {isa = PBXBuildFile; fileRef = DE71ADC31509EE7E00445B75 /* NSPersistentStoreCoordinator+Wyzers.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DE71ADC61509EE7F00445B75 /* NSPersistentStoreCoordinator+Wyzers.m in Sources */ = {isa = PBXBuildFile; fileRef = DE71ADC41509EE7E00445B75 /* NSPersistentStoreCoordinator+Wyzers.m */; };
-		DE923F671539BD130029C3CA /* WZGradientView.h in Headers */ = {isa = PBXBuildFile; fileRef = DE923F651539BD130029C3CA /* WZGradientView.h */; };
 		DE923F681539BD130029C3CA /* WZGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = DE923F661539BD130029C3CA /* WZGradientView.m */; };
 		DE923F6B1539BD450029C3CA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE923F6A1539BD450029C3CA /* CoreGraphics.framework */; };
 		DE923F6D1539BD770029C3CA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE923F6C1539BD770029C3CA /* QuartzCore.framework */; };
-		DE9CE9F71513263700CCB8A9 /* NSDictionary+Wyzers.h in Headers */ = {isa = PBXBuildFile; fileRef = DE9CE9F51513263700CCB8A9 /* NSDictionary+Wyzers.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DE9CE9F81513263700CCB8A9 /* NSDictionary+Wyzers.m in Sources */ = {isa = PBXBuildFile; fileRef = DE9CE9F61513263700CCB8A9 /* NSDictionary+Wyzers.m */; };
-		DE9CEA0415133DB100CCB8A9 /* WZHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = DEDE48F01507BBD5009ADF4A /* WZHelpers.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DE9CEA0515133DC000CCB8A9 /* WZGUI.h in Headers */ = {isa = PBXBuildFile; fileRef = DEE91E3E150F84A100C11F54 /* WZGUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DE9CEA0615133DD000CCB8A9 /* NSString+Wyzers.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC2861215123C8F0043CBD2 /* NSString+Wyzers.m */; };
-		DE9E4BDF151E320800F248D4 /* UIActionSheet+Wyzers.h in Headers */ = {isa = PBXBuildFile; fileRef = DE9E4BDD151E320800F248D4 /* UIActionSheet+Wyzers.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DE9E4BE0151E320800F248D4 /* UIActionSheet+Wyzers.m in Sources */ = {isa = PBXBuildFile; fileRef = DE9E4BDE151E320800F248D4 /* UIActionSheet+Wyzers.m */; };
-		DEA008D21529F712005BBCFA /* UIImage+Resize.h in Headers */ = {isa = PBXBuildFile; fileRef = DEA008D01529F712005BBCFA /* UIImage+Resize.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DEA008D31529F712005BBCFA /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = DEA008D11529F712005BBCFA /* UIImage+Resize.m */; };
-		DEA443C21510FCDD00E408F8 /* WZResponderLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = DEA443C01510FCDD00E408F8 /* WZResponderLabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DEA443C31510FCDD00E408F8 /* WZResponderLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = DEA443C11510FCDD00E408F8 /* WZResponderLabel.m */; };
-		DEAB0B501520C4A8001A3BB5 /* WZPromptAlertView.h in Headers */ = {isa = PBXBuildFile; fileRef = DEAB0B4E1520C4A8001A3BB5 /* WZPromptAlertView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DEAB0B511520C4A8001A3BB5 /* WZPromptAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = DEAB0B4F1520C4A8001A3BB5 /* WZPromptAlertView.m */; };
-		DEAB0B5615219011001A3BB5 /* UIAlertView+Wyzers.h in Headers */ = {isa = PBXBuildFile; fileRef = DEAB0B5415219011001A3BB5 /* UIAlertView+Wyzers.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DEAB0B5715219011001A3BB5 /* UIAlertView+Wyzers.m in Sources */ = {isa = PBXBuildFile; fileRef = DEAB0B5515219011001A3BB5 /* UIAlertView+Wyzers.m */; };
-		DEC01FBB151CA27300C7C1C6 /* UITableView+Wyzers.h in Headers */ = {isa = PBXBuildFile; fileRef = DEC01FB9151CA27300C7C1C6 /* UITableView+Wyzers.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DEC01FBC151CA27300C7C1C6 /* UITableView+Wyzers.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC01FBA151CA27300C7C1C6 /* UITableView+Wyzers.m */; };
-		DEC2861315123C8F0043CBD2 /* NSString+Wyzers.h in Headers */ = {isa = PBXBuildFile; fileRef = DEC2861115123C8F0043CBD2 /* NSString+Wyzers.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DEC2861715123CE60043CBD2 /* UIDevice+Wyzers.h in Headers */ = {isa = PBXBuildFile; fileRef = DEC2861515123CE60043CBD2 /* UIDevice+Wyzers.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DEC2861815123CE60043CBD2 /* UIDevice+Wyzers.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC2861615123CE60043CBD2 /* UIDevice+Wyzers.m */; };
 		DEC2863F151241D20043CBD2 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEC2863E151241D20043CBD2 /* Security.framework */; };
-		DEC28642151241FA0043CBD2 /* WZKeyChain.h in Headers */ = {isa = PBXBuildFile; fileRef = DEC28640151241FA0043CBD2 /* WZKeyChain.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DEC28643151241FA0043CBD2 /* WZKeyChain.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC28641151241FA0043CBD2 /* WZKeyChain.m */; settings = {COMPILER_FLAGS = ""; }; };
-		DEDE48ED1507B9B4009ADF4A /* WZCoreDataHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = DEDE48EB1507B9B4009ADF4A /* WZCoreDataHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DEDE48EE1507B9B4009ADF4A /* WZCoreDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = DEDE48EC1507B9B4009ADF4A /* WZCoreDataHelper.m */; };
-		DEDE48F3150891B4009ADF4A /* NSManagedObjectModel+Wyzers.h in Headers */ = {isa = PBXBuildFile; fileRef = DEDE48F1150891B4009ADF4A /* NSManagedObjectModel+Wyzers.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DEDE48F4150891B4009ADF4A /* NSManagedObjectModel+Wyzers.m in Sources */ = {isa = PBXBuildFile; fileRef = DEDE48F2150891B4009ADF4A /* NSManagedObjectModel+Wyzers.m */; };
-		DEE91E36150F7E6900C11F54 /* WZLabelCell.h in Headers */ = {isa = PBXBuildFile; fileRef = DEE91E34150F7E6900C11F54 /* WZLabelCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DEE91E37150F7E6900C11F54 /* WZLabelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE91E35150F7E6900C11F54 /* WZLabelCell.m */; };
-		DEE91E3A150F80C900C11F54 /* WZLabelFieldCell.h in Headers */ = {isa = PBXBuildFile; fileRef = DEE91E38150F80C900C11F54 /* WZLabelFieldCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DEE91E3B150F80C900C11F54 /* WZLabelFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE91E39150F80C900C11F54 /* WZLabelFieldCell.m */; };
-		DEE91E41150F895B00C11F54 /* WZLabelValueCell.h in Headers */ = {isa = PBXBuildFile; fileRef = DEE91E3F150F895B00C11F54 /* WZLabelValueCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DEE91E42150F895B00C11F54 /* WZLabelValueCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE91E40150F895B00C11F54 /* WZLabelValueCell.m */; };
-		DEE91E49150F8AFD00C11F54 /* WZButtonCell.h in Headers */ = {isa = PBXBuildFile; fileRef = DEE91E47150F8AFD00C11F54 /* WZButtonCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DEE91E4A150F8AFD00C11F54 /* WZButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE91E48150F8AFD00C11F54 /* WZButtonCell.m */; };
-		DEE91E5D150F972200C11F54 /* WZSelectViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = DEE91E5B150F972200C11F54 /* WZSelectViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DEE91E5E150F972200C11F54 /* WZSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE91E5C150F972200C11F54 /* WZSelectViewController.m */; };
-		DEE91E701510793600C11F54 /* UIView+Wyzers.h in Headers */ = {isa = PBXBuildFile; fileRef = DEE91E6E1510793600C11F54 /* UIView+Wyzers.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DEE91E711510793600C11F54 /* UIView+Wyzers.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE91E6F1510793600C11F54 /* UIView+Wyzers.m */; };
 		DEED52401507B1CD00F3C820 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEED523F1507B1CD00F3C820 /* Foundation.framework */; };
-		DEED52701507B25700F3C820 /* WZFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = DEED526F1507B25700F3C820 /* WZFoundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DEED52741507B2A200F3C820 /* LoadableCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = DEED52731507B2A200F3C820 /* LoadableCategory.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DEED52771507B33200F3C820 /* NSArray+WZHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = DEED52751507B33200F3C820 /* NSArray+WZHelpers.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DEED52781507B33200F3C820 /* NSArray+WZHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = DEED52761507B33200F3C820 /* NSArray+WZHelpers.m */; };
 		DEED528F1507B64A00F3C820 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEED528E1507B64A00F3C820 /* CoreData.framework */; };
-		DEED52931507B66400F3C820 /* NSManagedObjectContext+Wyzers.h in Headers */ = {isa = PBXBuildFile; fileRef = DEED52911507B66400F3C820 /* NSManagedObjectContext+Wyzers.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DEED52941507B66400F3C820 /* NSManagedObjectContext+Wyzers.m in Sources */ = {isa = PBXBuildFile; fileRef = DEED52921507B66400F3C820 /* NSManagedObjectContext+Wyzers.m */; };
-		DEED52971507B6A000F3C820 /* NSManagedObject+Wyzers.h in Headers */ = {isa = PBXBuildFile; fileRef = DEED52951507B69F00F3C820 /* NSManagedObject+Wyzers.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DEED52981507B6A000F3C820 /* NSManagedObject+Wyzers.m in Sources */ = {isa = PBXBuildFile; fileRef = DEED52961507B6A000F3C820 /* NSManagedObject+Wyzers.m */; };
 /* End PBXBuildFile section */
 
@@ -285,45 +256,6 @@
 		};
 /* End PBXGroup section */
 
-/* Begin PBXHeadersBuildPhase section */
-		DEED523A1507B1CD00F3C820 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				DEED52701507B25700F3C820 /* WZFoundation.h in Headers */,
-				DEED52741507B2A200F3C820 /* LoadableCategory.h in Headers */,
-				DEED52771507B33200F3C820 /* NSArray+WZHelpers.h in Headers */,
-				DEED52931507B66400F3C820 /* NSManagedObjectContext+Wyzers.h in Headers */,
-				DEED52971507B6A000F3C820 /* NSManagedObject+Wyzers.h in Headers */,
-				DEDE48ED1507B9B4009ADF4A /* WZCoreDataHelper.h in Headers */,
-				DEDE48F3150891B4009ADF4A /* NSManagedObjectModel+Wyzers.h in Headers */,
-				DE71ADA31509106200445B75 /* WZCoreData.h in Headers */,
-				DE71ADC51509EE7F00445B75 /* NSPersistentStoreCoordinator+Wyzers.h in Headers */,
-				DEE91E36150F7E6900C11F54 /* WZLabelCell.h in Headers */,
-				DEE91E3A150F80C900C11F54 /* WZLabelFieldCell.h in Headers */,
-				DEE91E41150F895B00C11F54 /* WZLabelValueCell.h in Headers */,
-				DEE91E49150F8AFD00C11F54 /* WZButtonCell.h in Headers */,
-				DEE91E5D150F972200C11F54 /* WZSelectViewController.h in Headers */,
-				DEE91E701510793600C11F54 /* UIView+Wyzers.h in Headers */,
-				DEA443C21510FCDD00E408F8 /* WZResponderLabel.h in Headers */,
-				DEC2861315123C8F0043CBD2 /* NSString+Wyzers.h in Headers */,
-				DEC2861715123CE60043CBD2 /* UIDevice+Wyzers.h in Headers */,
-				DEC28642151241FA0043CBD2 /* WZKeyChain.h in Headers */,
-				DE9CE9F71513263700CCB8A9 /* NSDictionary+Wyzers.h in Headers */,
-				DE9CEA0415133DB100CCB8A9 /* WZHelpers.h in Headers */,
-				DEAB0B5615219011001A3BB5 /* UIAlertView+Wyzers.h in Headers */,
-				DE43D17015258F7700C16766 /* NSDate+WZJSON.h in Headers */,
-				DEA008D21529F712005BBCFA /* UIImage+Resize.h in Headers */,
-				DEC01FBB151CA27300C7C1C6 /* UITableView+Wyzers.h in Headers */,
-				DE9E4BDF151E320800F248D4 /* UIActionSheet+Wyzers.h in Headers */,
-				DEAB0B501520C4A8001A3BB5 /* WZPromptAlertView.h in Headers */,
-				DE9CEA0515133DC000CCB8A9 /* WZGUI.h in Headers */,
-				DE923F671539BD130029C3CA /* WZGradientView.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXHeadersBuildPhase section */
-
 /* Begin PBXNativeTarget section */
 		DEED523B1507B1CD00F3C820 /* WZFoundation */ = {
 			isa = PBXNativeTarget;
@@ -331,7 +263,6 @@
 			buildPhases = (
 				DEED52381507B1CD00F3C820 /* Sources */,
 				DEED52391507B1CD00F3C820 /* Frameworks */,
-				DEED523A1507B1CD00F3C820 /* Headers */,
 			);
 			buildRules = (
 			);
