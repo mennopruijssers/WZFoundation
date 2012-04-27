@@ -29,7 +29,12 @@ MAKE_CATEGORIES_LOADABLE(NSManagedObjectContext_Wyzers)
 
 #pragma mark Save
 - (BOOL)save {
-    return [self save:nil];
+    NSError *error = nil;
+    BOOL saved = [self save:&error];
+    if(error) {
+        [WZCoreDataHelper handleError:error];
+    }
+    return saved;
 }
 
 - (BOOL)saveWithErrorHandler:(void (^)(NSError *))errorHandler {
