@@ -18,7 +18,8 @@ MAKE_CATEGORIES_LOADABLE(NSPersistentStoreCoordinator_Wyzers)
 @implementation NSPersistentStoreCoordinator (Wyzers)
 - (NSPersistentStore *)addSQLiteStoreWithName:(NSString *)name automigrating:(BOOL)autoMigrating {
     NSString *basePath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject];
-    NSURL *storeUrl = [NSURL fileURLWithPath:[basePath stringByAppendingPathComponent:name]];
+    NSString *filePath = [basePath stringByAppendingPathComponent:name];
+    NSURL *storeUrl = [NSURL fileURLWithPath:filePath];
     
     return [self addSQLiteStoreWithUL:storeUrl automigrating:autoMigrating];
 }
