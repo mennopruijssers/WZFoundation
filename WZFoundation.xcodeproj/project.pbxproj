@@ -23,6 +23,7 @@
 		DEC2861815123CE60043CBD2 /* UIDevice+Wyzers.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC2861615123CE60043CBD2 /* UIDevice+Wyzers.m */; };
 		DEC2863F151241D20043CBD2 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEC2863E151241D20043CBD2 /* Security.framework */; };
 		DEC28643151241FA0043CBD2 /* WZKeyChain.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC28641151241FA0043CBD2 /* WZKeyChain.m */; settings = {COMPILER_FLAGS = ""; }; };
+		DED2EE42154D8C8F00C91558 /* UIButton+Wyzers.m in Sources */ = {isa = PBXBuildFile; fileRef = DED2EE41154D8C8F00C91558 /* UIButton+Wyzers.m */; };
 		DEDE48EE1507B9B4009ADF4A /* WZCoreDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = DEDE48EC1507B9B4009ADF4A /* WZCoreDataHelper.m */; };
 		DEDE48F4150891B4009ADF4A /* NSManagedObjectModel+Wyzers.m in Sources */ = {isa = PBXBuildFile; fileRef = DEDE48F2150891B4009ADF4A /* NSManagedObjectModel+Wyzers.m */; };
 		DEE91E37150F7E6900C11F54 /* WZLabelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE91E35150F7E6900C11F54 /* WZLabelCell.m */; };
@@ -70,6 +71,8 @@
 		DEC2863E151241D20043CBD2 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		DEC28640151241FA0043CBD2 /* WZKeyChain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WZKeyChain.h; sourceTree = "<group>"; };
 		DEC28641151241FA0043CBD2 /* WZKeyChain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WZKeyChain.m; sourceTree = "<group>"; };
+		DED2EE40154D8C8F00C91558 /* UIButton+Wyzers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Wyzers.h"; sourceTree = "<group>"; };
+		DED2EE41154D8C8F00C91558 /* UIButton+Wyzers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Wyzers.m"; sourceTree = "<group>"; };
 		DEDE48EB1507B9B4009ADF4A /* WZCoreDataHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WZCoreDataHelper.h; sourceTree = "<group>"; };
 		DEDE48EC1507B9B4009ADF4A /* WZCoreDataHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WZCoreDataHelper.m; sourceTree = "<group>"; };
 		DEDE48F01507BBD5009ADF4A /* WZHelpers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WZHelpers.h; sourceTree = "<group>"; };
@@ -138,6 +141,8 @@
 				DEAB0B5515219011001A3BB5 /* UIAlertView+Wyzers.m */,
 				DE923F651539BD130029C3CA /* WZGradientView.h */,
 				DE923F661539BD130029C3CA /* WZGradientView.m */,
+				DED2EE40154D8C8F00C91558 /* UIButton+Wyzers.h */,
+				DED2EE41154D8C8F00C91558 /* UIButton+Wyzers.m */,
 			);
 			path = GUI;
 			sourceTree = "<group>";
@@ -329,6 +334,7 @@
 				DE43D17115258F7700C16766 /* NSDate+WZJSON.m in Sources */,
 				DEA008D31529F712005BBCFA /* UIImage+Resize.m in Sources */,
 				DE923F681539BD130029C3CA /* WZGradientView.m in Sources */,
+				DED2EE42154D8C8F00C91558 /* UIButton+Wyzers.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

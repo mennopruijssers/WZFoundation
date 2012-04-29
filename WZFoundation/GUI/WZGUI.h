@@ -24,4 +24,5 @@
 #import "WZPromptAlertView.h"
 #import "WZGradientView.h"
 
+#import "UIButton+Wyzers.h"
 #endif
