@@ -98,7 +98,11 @@ static void QueueRelease(void* context ){
             [mainContext observeContext:result];
             [result observeContext:mainContext];
         }
+
+        //released in QueueRelease handler
+#ifndef __clang_analyzer__
         dispatch_queue_set_specific(queue, (__bridge void*) KEY, (__bridge_retained void*)result, QueueRelease);        
+#endif
     }
     
     return result;        
