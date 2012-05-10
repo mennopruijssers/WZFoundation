@@ -10,9 +10,10 @@
 #import "WZHelpers.h"
 #import "WZCoreDataHelper.h"
 #import "NSManagedObjectContext+Wyzers.h"
+#import "JRSwizzle.h"
 
 static NSObject *KEY = @"DispatchQueueManagedObjectContext";
-
+//static NSInteger lockCount = 0;
 MAKE_CATEGORIES_LOADABLE(NSPersistentStoreCoordinator_Wyzers)
 
 @implementation NSPersistentStoreCoordinator (Wyzers)
@@ -107,6 +108,23 @@ static void QueueRelease(void* context ){
     
     return result;        
 }
+
+//- (void)lockOverride {
+//    NSLog(@"  lock: %i - %@", lockCount, [NSThread currentThread]);
+//    lockCount++;
+//    [self lockOverride];
+//}
+//
+//- (void)unlockOverride {
+//    [self unlockOverride];
+//    lockCount--;
+//    NSLog(@"unlock: %i - %@", lockCount, [NSThread currentThread]);
+//}
+//
+//+ (void)load {
+//    [NSPersistentStoreCoordinator jr_swizzleMethod:@selector(lock) withMethod:@selector(lockOverride) error:nil];
+//    [NSPersistentStoreCoordinator jr_swizzleMethod:@selector(unlock) withMethod:@selector(unlockOverride) error:nil];
+//}
 
 - (NSManagedObjectContext *)managedObjectContextForCurrentQueue {
     return [self managedObjectContextForDispatchQueue:dispatch_get_current_queue()];

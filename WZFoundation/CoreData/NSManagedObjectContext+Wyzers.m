@@ -8,6 +8,7 @@
 
 #import "NSManagedObjectContext+Wyzers.h"
 #import "WZCoreDataHelper.h"
+#import "JRSwizzle.h"
 MAKE_CATEGORIES_LOADABLE(NSManagedObjectContext_Wyzers)
 
 @interface NSManagedObjectContext (WyzersPrivate)
@@ -16,10 +17,11 @@ MAKE_CATEGORIES_LOADABLE(NSManagedObjectContext_Wyzers)
 
 @implementation NSManagedObjectContext (Wyzers)
 - (void)mergeChanges:(NSNotification *)notification {
-    [self mergeChangesFromContextDidSaveNotification:notification];
+    [self performSelectorOnMainThread:@selector(mergeChangesFromContextDidSaveNotification:) withObject:notification waitUntilDone:NO];
+    //[self mergeChangesFromContextDidSaveNotification:notification];
 }
 #pragma mark Change notification observation
-- (void)observeContext:(NSManagedObjectContext *)otherContext {    
+- (void)observeContext:(NSManagedObjectContext *)otherContext {        
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(mergeChanges:) name:NSManagedObjectContextDidSaveNotification object:otherContext];
 }
 
@@ -36,6 +38,14 @@ MAKE_CATEGORIES_LOADABLE(NSManagedObjectContext_Wyzers)
     }
     return saved;
 }
+
+//- (BOOL)saveOverride:(NSError *__autoreleasing *)error {
+//    return [self saveOverride:error];
+//}
+//
+//+ (void)load {
+//    [NSManagedObjectContext jr_swizzleMethod:@selector(save:) withMethod:@selector(saveOverride:) error:nil];
+//}
 
 - (BOOL)saveWithErrorHandler:(void (^)(NSError *))errorHandler {
     NSError *error = nil;

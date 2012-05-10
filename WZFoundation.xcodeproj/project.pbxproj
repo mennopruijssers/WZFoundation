@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		DE43D17115258F7700C16766 /* NSDate+WZJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = DE43D16F15258F7700C16766 /* NSDate+WZJSON.m */; };
+		DE546A02155C17A800270A1A /* JRSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = DE546A01155C17A800270A1A /* JRSwizzle.m */; };
 		DE71ADC61509EE7F00445B75 /* NSPersistentStoreCoordinator+Wyzers.m in Sources */ = {isa = PBXBuildFile; fileRef = DE71ADC41509EE7E00445B75 /* NSPersistentStoreCoordinator+Wyzers.m */; };
 		DE923F681539BD130029C3CA /* WZGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = DE923F661539BD130029C3CA /* WZGradientView.m */; };
 		DE923F6B1539BD450029C3CA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE923F6A1539BD450029C3CA /* CoreGraphics.framework */; };
@@ -42,6 +43,8 @@
 /* Begin PBXFileReference section */
 		DE43D16E15258F7700C16766 /* NSDate+WZJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+WZJSON.h"; sourceTree = "<group>"; };
 		DE43D16F15258F7700C16766 /* NSDate+WZJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+WZJSON.m"; sourceTree = "<group>"; };
+		DE546A00155C17A800270A1A /* JRSwizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JRSwizzle.h; sourceTree = "<group>"; };
+		DE546A01155C17A800270A1A /* JRSwizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JRSwizzle.m; sourceTree = "<group>"; };
 		DE71ADA21509106200445B75 /* WZCoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WZCoreData.h; sourceTree = "<group>"; };
 		DE71ADC31509EE7E00445B75 /* NSPersistentStoreCoordinator+Wyzers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSPersistentStoreCoordinator+Wyzers.h"; sourceTree = "<group>"; };
 		DE71ADC41509EE7E00445B75 /* NSPersistentStoreCoordinator+Wyzers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSPersistentStoreCoordinator+Wyzers.m"; sourceTree = "<group>"; };
@@ -237,6 +240,8 @@
 		DEED526B1507B22500F3C820 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				DE546A00155C17A800270A1A /* JRSwizzle.h */,
+				DE546A01155C17A800270A1A /* JRSwizzle.m */,
 				DEDE48F01507BBD5009ADF4A /* WZHelpers.h */,
 				DEED52731507B2A200F3C820 /* LoadableCategory.h */,
 				DEED52751507B33200F3C820 /* NSArray+WZHelpers.h */,
@@ -335,6 +340,7 @@
 				DEA008D31529F712005BBCFA /* UIImage+Resize.m in Sources */,
 				DE923F681539BD130029C3CA /* WZGradientView.m in Sources */,
 				DED2EE42154D8C8F00C91558 /* UIButton+Wyzers.m in Sources */,
+				DE546A02155C17A800270A1A /* JRSwizzle.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
