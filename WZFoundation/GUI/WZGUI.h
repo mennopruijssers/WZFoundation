@@ -25,4 +25,5 @@
 #import "WZGradientView.h"
 
 #import "UIButton+Wyzers.h"
+#import "WZInnerShadowLabel.h"
 #endif
