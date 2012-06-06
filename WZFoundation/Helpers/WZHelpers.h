@@ -19,6 +19,7 @@
 #import "NSDate+WZJSON.h"
 #import "UIImage+Resize.h"
 #import "JRSwizzle.h"
+#import "NSThread+Wyzers.h"
 #endif
 
 static inline UIViewAnimationOptions animationOptionsWithCurve(UIViewAnimationCurve curve)
