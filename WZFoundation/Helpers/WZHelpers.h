@@ -20,6 +20,7 @@
 #import "UIImage+Resize.h"
 #import "JRSwizzle.h"
 #import "NSThread+Wyzers.h"
+#import "UIView+Wyzers.h"
 #endif
 
 static inline UIViewAnimationOptions animationOptionsWithCurve(UIViewAnimationCurve curve)
